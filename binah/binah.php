@@ -18,6 +18,10 @@ if(BINAH_CONF["debug"])
 $appConfig = unyaml_file(APP_HOME . "/app.yml")["app"];
 define("APP_CONF", $appConfig["config"]);
 
+if(isset($appConfig["include"]))
+    foreach($appConfig["include"] as $incl)
+        require_once APP_HOME . "/$incl.php";
+
 $router = \FastRoute\cachedDispatcher(function(RouteCollector $r) use ($appConfig) {
     foreach($appConfig["routes"] as $route) {
         if(!$route["handler"])
