@@ -1,0 +1,21 @@
+app:
+    config:
+        name: "x"
+        
+    errors:
+        notFound:
+            handler: "404"
+            template: "NotFound"
+        
+        notAllowed:
+            handler: "405"
+            template: "NotAllowed"
+        
+        error:
+            handler: "err"
+            template: "Error"
+    
+    routes:
+        - url: "/"
+          handler: "index"
+          template: "Index"

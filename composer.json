@@ -1,0 +1,22 @@
+{
+    "name": "binah/binah",
+    "description": "PHP picoframework",
+    "type": "project",
+    "license": "AGPLv3+",
+    "authors": [
+        {
+            "name": "Ciara Onion",
+            "email": "SumirekoUsami@users.noreply.github.com"
+        }
+    ],
+    "minimum-stability": "beta",
+    "require": {
+        "nyholm/psr7-server": "^1.0",
+        "nyholm/psr7": "^1.4",
+        "symfony/yaml": "^5.4",
+        "nikic/fast-route": "^1.3",
+        "latte/latte": "^2.10",
+        "nette/caching": "^3.1",
+        "tracy/tracy": "^2.9"
+    }
+}
